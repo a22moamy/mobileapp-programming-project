@@ -14,10 +14,10 @@ import java.util.ArrayList;
 @SuppressWarnings("FieldCanBeLocal")
 public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener {
 
-    private Mountain[] mountains;
+    private StarSign[] mountains;
     private  RecyclerViewAdapter adapter;
     ArrayList<RecyclerViewItem> items = new ArrayList<>();
-    private final String JSON_URL = "https://mobprog.webug.se/json-api?login=brom";
+    private final String JSON_URL = "https://mobprog.webug.se/json-api?login=a22moamy";
 
 
     @Override
@@ -40,10 +40,10 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
         Log.d("MainActivity", json);
         Gson gson = new Gson();
-        Mountain[] mountains = gson.fromJson(json, Mountain[].class);
+        StarSign[] signs = gson.fromJson(json, StarSign[].class);
 
-        for (int i=0; i<mountains.length; i++) {
-            items.add(new RecyclerViewItem(mountains[i].toString()));
+        for (int i=0; i<signs.length; i++) {
+            items.add(new RecyclerViewItem(signs[i].getName() , signs[i].getDatum()));
         }
 
         adapter.notifyDataSetChanged();

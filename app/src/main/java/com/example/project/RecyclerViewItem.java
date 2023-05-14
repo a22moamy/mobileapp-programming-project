@@ -5,12 +5,21 @@ import java.util.Arrays;
 
 @SuppressWarnings("WeakerAccess")
 public class RecyclerViewItem {
-    private String title;
-    public RecyclerViewItem(String title) {
-        this.title = title;
+    private String name;
+    private String datum;
+    public RecyclerViewItem(String name, String datum) {
+        this.name = name;
+        this.datum = datum;
     }
-    public String getTitle() {
-        return title;
+
+
+    public String getName() {
+        return name;
     }
+
+    public String getDatum() {
+        return datum;
+    }
+
 }
 

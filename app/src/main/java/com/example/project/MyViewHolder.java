@@ -8,10 +8,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class MyViewHolder extends RecyclerView.ViewHolder  {
 
-    TextView titleView;
+    TextView nameView;
+    TextView datumView;
     public MyViewHolder(@NonNull View itemView) {
         super(itemView);
-        titleView = itemView.findViewById(R.id.title);
+        datumView = itemView.findViewById(R.id.datum);
+        nameView = itemView.findViewById(R.id.name);
     }
 
 }
