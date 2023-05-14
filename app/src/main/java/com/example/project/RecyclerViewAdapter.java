@@ -32,6 +32,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<MyViewHolder> {
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.nameView.setText(items.get(position).getName());
         holder.datumView.setText(items.get(position).getDatum());
+        holder.imageView.setText(items.get(position).getImage());
+
     }
 
 

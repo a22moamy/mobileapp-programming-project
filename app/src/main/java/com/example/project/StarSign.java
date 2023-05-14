@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
         private String name;
 
         @SerializedName("company")
-        private String bild;
+        private String image;
 
         @SerializedName("location")
         private String datum;
@@ -23,6 +23,8 @@ import com.google.gson.annotations.SerializedName;
         public String getName(){ return name; }
 
         public String getDatum(){ return datum; }
+
+        public String getImage(){ return "https://cdn.pixabay.com/photo/" + image; }
 
         @Override
         public String toString() { return name; }

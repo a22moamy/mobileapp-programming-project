@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         StarSign[] signs = gson.fromJson(json, StarSign[].class);
 
         for (int i=0; i<signs.length; i++) {
-            items.add(new RecyclerViewItem(signs[i].getName() , signs[i].getDatum()));
+            items.add(new RecyclerViewItem(signs[i].getName() , signs[i].getDatum(), signs[i].getImage()));
         }
 
         adapter.notifyDataSetChanged();

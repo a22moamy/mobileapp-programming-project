@@ -10,10 +10,14 @@ public class MyViewHolder extends RecyclerView.ViewHolder  {
 
     TextView nameView;
     TextView datumView;
+    TextView imageView;
+
     public MyViewHolder(@NonNull View itemView) {
         super(itemView);
         datumView = itemView.findViewById(R.id.datum);
         nameView = itemView.findViewById(R.id.name);
+        imageView = itemView.findViewById(R.id.image);
+
     }
 
 }

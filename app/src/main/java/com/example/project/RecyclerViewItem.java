@@ -7,9 +7,13 @@ import java.util.Arrays;
 public class RecyclerViewItem {
     private String name;
     private String datum;
-    public RecyclerViewItem(String name, String datum) {
+    private String image;
+
+    public RecyclerViewItem(String name, String datum, String image) {
         this.name = name;
         this.datum = datum;
+        this.image = image;
+
     }
 
 
@@ -19,6 +23,10 @@ public class RecyclerViewItem {
 
     public String getDatum() {
         return datum;
+    }
+
+    public String getImage() {
+        return image;
     }
 
 }
