@@ -24,7 +24,7 @@ import com.google.gson.annotations.SerializedName;
 
         public String getDatum(){ return datum; }
 
-        public String getImage(){ return "https://cdn.pixabay.com/photo/" + image; }
+        public String getImage(){ return image; }
 
         @Override
         public String toString() { return name; }
