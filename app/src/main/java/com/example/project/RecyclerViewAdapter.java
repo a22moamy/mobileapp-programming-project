@@ -40,12 +40,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
         Resources resources = context.getResources();
         int resourceId = resources.getIdentifier(hey, "drawable", context.getPackageName());
+        holder.imageView.setImageResource(resourceId);
 
-        if (resourceId != 0) {
-            holder.imageView.setImageResource(resourceId);
-        } else {
-            Log.d("ImgError", "Image not found");
-        }
 
     }
 
