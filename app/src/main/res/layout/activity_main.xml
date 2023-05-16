@@ -19,18 +19,18 @@
     </com.google.android.material.appbar.AppBarLayout>
 
 
-
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
+        android:fontFamily="@font/playfair_display"
+
         android:text="@string/title"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@id/InfoText"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -43,15 +43,15 @@
         app:layout_constraintTop_toBottomOf="@id/InfoText" />
 
     <TextView
-        android:gravity="center"
         android:id="@+id/InfoText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/ysbaeu_500"
+        android:gravity="center"
         android:text="@string/InfoText"
+        app:layout_constraintBottom_toTopOf="@id/recycler_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title"
-        app:layout_constraintBottom_toTopOf="@id/recycler_view"
-        tools:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="36dp" />
+        tools:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
