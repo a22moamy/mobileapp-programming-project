@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">StarGuide</string>
     <string name="title">Alla stjärntecken</string>
+    <string name="InfoText">Aliquam nec ex tellus. Sed congue elementum leo, at eleifend arcu mattis sit amet. Suspendisse et neque lacus. Nulla sapien tellus, feugiat a dui mollis, scelerisque ultrices magna.</string>
 </resources>
