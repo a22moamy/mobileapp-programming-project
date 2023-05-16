@@ -8,11 +8,14 @@ public class RecyclerViewItem {
     private String name;
     private String datum;
     private String image;
+    private String button;
 
     public RecyclerViewItem(String name, String datum, String image) {
         this.name = name;
         this.datum = datum;
         this.image = image;
+        this.button = button;
+
 
     }
 
@@ -27,6 +30,10 @@ public class RecyclerViewItem {
 
     public String getImage() {
         return image;
+    }
+
+    public String getButton() {
+        return button;
     }
 
 }

@@ -1,6 +1,7 @@
 package com.example.project;
 
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,13 +13,14 @@ public class MyViewHolder extends RecyclerView.ViewHolder  {
     TextView nameView;
     TextView datumView;
     ImageView imageView;
+    Button buttonView;
 
     public MyViewHolder(@NonNull View itemView) {
         super(itemView);
         datumView = itemView.findViewById(R.id.datum);
         nameView = itemView.findViewById(R.id.name);
         imageView = itemView.findViewById(R.id.image);
-
+        buttonView = itemView.findViewById(R.id.button);
 
 
     }
