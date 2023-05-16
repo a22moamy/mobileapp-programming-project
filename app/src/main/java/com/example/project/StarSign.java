@@ -13,6 +13,8 @@ import com.google.gson.annotations.SerializedName;
         @SerializedName("location")
         private String datum;
 
+
+
         @SerializedName("category")
         private String procent;
 
@@ -21,12 +23,10 @@ import com.google.gson.annotations.SerializedName;
         private int cost;
 
         public String getName(){ return name; }
-
         public String getDatum(){ return datum; }
-
         public String getImage(){ return image; }
-
         @Override
         public String toString() { return name; }
+        public String getProcent() { return procent; }
 
     }

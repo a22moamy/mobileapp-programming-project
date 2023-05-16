@@ -95,10 +95,17 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
     @Override
     public void onItemClick(int position) {
+        RecyclerViewItem sign = items.get(position);
+        String datum = sign.getDatum();
+        String image = sign.getImage();
+        String procent = sign.getProcent();
+        String name = sign.getName();
         Intent intent = new Intent(MainActivity.this, ThirdActivity.class);
-        TextView zodiacName = findViewById(R.id.name);
+        intent.putExtra("datum", datum);
+        intent.putExtra("image", image);
+        intent.putExtra("procent", procent);
+        intent.putExtra("name", name);
 
-        intent.putExtra("name", zodiacName.getText().toString());
         startActivity(intent);
     }
 }

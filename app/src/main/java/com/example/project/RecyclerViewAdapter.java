@@ -41,10 +41,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<MyViewHolder> {
         holder.nameView.setText(items.get(position).getName());
         holder.datumView.setText(items.get(position).getDatum());
 
-        String hey = (items.get(position).getImage());
+        String imagePos = (items.get(position).getImage());
 
         Resources resources = context.getResources();
-        int resourceId = resources.getIdentifier(hey, "drawable", context.getPackageName());
+        int resourceId = resources.getIdentifier(imagePos, "drawable", context.getPackageName());
         holder.imageView.setImageResource(resourceId);
 
 

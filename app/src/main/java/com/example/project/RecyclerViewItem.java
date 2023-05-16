@@ -10,11 +10,14 @@ public class RecyclerViewItem {
     private String image;
     private String button;
 
+    private String procent;
+
     public RecyclerViewItem(String name, String datum, String image) {
         this.name = name;
         this.datum = datum;
         this.image = image;
         this.button = button;
+        this.procent = procent;
 
 
     }
@@ -35,6 +38,12 @@ public class RecyclerViewItem {
     public String getButton() {
         return button;
     }
+
+    public String getProcent() {
+        return procent;
+    }
+
+
 
 }
 
