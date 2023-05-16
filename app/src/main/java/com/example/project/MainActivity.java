@@ -20,7 +20,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 @SuppressWarnings("FieldCanBeLocal")
-public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener {
+public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener, RecyclerViewInterface {
 
     private StarSign[] mountains;
     private  RecyclerViewAdapter adapter;
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        adapter = new RecyclerViewAdapter(this, items);
+        adapter = new RecyclerViewAdapter(this, items, this);
 
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -92,4 +92,9 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
     }
 
+    @Override
+    public void onItemClick(int position) {
+        Intent intent = new Intent(MainActivity.this, ThirdActivity.class);
+        startActivity(intent);
+    }
 }
