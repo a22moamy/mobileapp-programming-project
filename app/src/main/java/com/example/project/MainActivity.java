@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -95,6 +96,9 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
     @Override
     public void onItemClick(int position) {
         Intent intent = new Intent(MainActivity.this, ThirdActivity.class);
+        TextView zodiacName = findViewById(R.id.name);
+
+        intent.putExtra("name", zodiacName.getText().toString());
         startActivity(intent);
     }
 }

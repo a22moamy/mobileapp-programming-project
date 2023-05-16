@@ -6,6 +6,7 @@
     android:layout_height="300dp"
     android:orientation="vertical"
     android:padding="10dp"
+    android:layout_gravity="center_horizontal"
     >
 
     <TextView
@@ -35,7 +36,7 @@
         android:layout_width="117dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/ysbaeu_500"
-        android:gravity="center"
+        android:gravity="center_horizontal"
         android:text="Read more" />
 
 </LinearLayout>
