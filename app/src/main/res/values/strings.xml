@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">StarGuide</string>
     <string name="title">Alla stjärntecken</string>
-    <string name="InfoText">Aliquam nec ex tellus. Sed congue elementum leo, at eleifend arcu mattis sit amet. Suspendisse et neque lacus. Nulla sapien tellus, feugiat a dui mollis, scelerisque ultrices magna.</string>
+    <string name="InfoText">Här finns information om alla fina stjärntecken! Tryck gärna på en utav dem för att läsa mer om det tecknet. </string>
 </resources>

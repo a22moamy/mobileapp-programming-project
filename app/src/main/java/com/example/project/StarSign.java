@@ -1,7 +1,10 @@
 package com.example.project;
 
 import com.google.gson.annotations.SerializedName;
-    public class StarSign {
+
+import java.util.ArrayList;
+
+public class StarSign {
 
         @SerializedName("ID")
         private String id;
@@ -22,11 +25,14 @@ import com.google.gson.annotations.SerializedName;
 
         private int cost;
 
+        @SerializedName("auxdata")
+        private String[] auxdata;
+
         public String getName(){ return name; }
         public String getDatum(){ return datum; }
         public String getImage(){ return image; }
-        @Override
-        public String toString() { return name; }
+
         public String getProcent() { return procent; }
 
-    }
+        public String[] getAuxdata() { return auxdata; }
+}

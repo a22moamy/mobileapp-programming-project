@@ -18,12 +18,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
+import org.json.JSONArray;
+
 import java.util.ArrayList;
 
 @SuppressWarnings("FieldCanBeLocal")
 public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener, RecyclerViewInterface {
 
     private StarSign[] mountains;
+    private String[] qualities;
     private  RecyclerViewAdapter adapter;
     ArrayList<RecyclerViewItem> items = new ArrayList<>();
     private final String JSON_URL = "https://mobprog.webug.se/json-api?login=a22moamy";
@@ -85,8 +88,10 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         Gson gson = new Gson();
         StarSign[] signs = gson.fromJson(json, StarSign[].class);
 
+
+
         for (int i=0; i<signs.length; i++) {
-            items.add(new RecyclerViewItem(signs[i].getName() , signs[i].getDatum(), signs[i].getImage()));
+            items.add(new RecyclerViewItem(signs[i].getName() , signs[i].getDatum(), signs[i].getImage(), signs[i].getProcent(), signs[i].getAuxdata()));
         }
 
         adapter.notifyDataSetChanged();
@@ -100,11 +105,13 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         String image = sign.getImage();
         String procent = sign.getProcent();
         String name = sign.getName();
+        String[] auxdata = sign.getAuxdata();
         Intent intent = new Intent(MainActivity.this, ThirdActivity.class);
         intent.putExtra("datum", datum);
         intent.putExtra("image", image);
         intent.putExtra("procent", procent);
         intent.putExtra("name", name);
+        intent.putExtra("auxdata", auxdata);
 
         startActivity(intent);
     }

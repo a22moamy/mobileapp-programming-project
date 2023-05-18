@@ -44,21 +44,25 @@
         android:id="@+id/imageView"
         android:layout_width="153dp"
         android:layout_height="121dp"
-        app:srcCompat="@drawable/vagen" />
+        app:srcCompat="@drawable/vagen"
+        android:textSize="18sp"/>
 
     <TextView
         android:id="@+id/zodiacDatum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/ysbaeu_500"
-        android:text="14 februari - 30 october" />
+        android:text="14 februari - 30 october"
+        android:textSize="18sp"/>
 
     <TextView
         android:id="@+id/zodiacProcent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/ysbaeu_500"
-        android:text="6,7% av befolkningen" />
+        android:text="6,7% av befolkningen"
+        android:gravity="center_horizontal"
+        android:textSize="18sp"/>
 
     <TextView
         android:id="@+id/zodiacQual"
@@ -66,15 +70,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/ysbaeu_500"
-        android:text="You're nice sometimes" />
-
-    <TextView
-        android:id="@+id/zodiacAdvice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/ysbaeu_500"
-        android:text="Don't text and drive today." />
+        android:text="You're nice sometimes"
+        android:gravity="center_horizontal"
+        android:textSize="18sp"/>
 
   </LinearLayout>
 

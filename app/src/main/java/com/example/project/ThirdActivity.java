@@ -1,5 +1,7 @@
 package com.example.project;
 
+import static java.lang.String.valueOf;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -14,6 +16,7 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class ThirdActivity extends MainActivity {
 
@@ -24,13 +27,11 @@ public class ThirdActivity extends MainActivity {
     + Add an array of advice  for zodiacs AND/OR add an array of egenskaper for every sign in
     JSON data.
     */
-    private final String JSON_URL = "https://mobprog.webug.se/json-api?login=a22moamy";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third);
 
-        new JsonTask(this, this).execute(JSON_URL);
 
     }
 
@@ -75,10 +76,6 @@ public class ThirdActivity extends MainActivity {
     @Override
     public void onPostExecute(String json) {
 
-        Log.d("MainActivity", json);
-        Gson gson = new Gson();
-        StarSign[] signs = gson.fromJson(json, StarSign[].class);
-
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
 
@@ -87,15 +84,23 @@ public class ThirdActivity extends MainActivity {
             TextView zodiacDatum = findViewById(R.id.zodiacDatum);
             TextView zodiacProcent = findViewById(R.id.zodiacProcent);
             TextView zodiacQual = findViewById(R.id.zodiacQual);
-            TextView zodiacAdvice = findViewById(R.id.zodiacAdvice);
 
             String datum = extras.getString("datum");
             String name = extras.getString("name");
             String image = extras.getString("image");
+            String procent = extras.getString("procent");
+            String[] auxdata = extras.getStringArray("auxdata");
 
             zodiacDatum.setText(datum);
             zodiacTitle.setText(name);
-
+            zodiacProcent.setText(procent + " av befolkningen i Valhalla är " + (name.toLowerCase(Locale.ROOT)) + ".");
+            StringBuilder stringBuilder = new StringBuilder();
+            for (int i = 0; i < auxdata.length; i++) {
+                stringBuilder.append(auxdata[i]);
+                if (i < auxdata.length - 1) { stringBuilder.append(", "); }
+            }
+            String egenskaper = stringBuilder.toString();
+            zodiacQual.setText("Ni är " + egenskaper + ".");
 
             Resources resources = getResources();
             int resourceId = resources.getIdentifier(image, "drawable", getPackageName());

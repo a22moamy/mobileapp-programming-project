@@ -51,6 +51,7 @@
         app:layout_constraintBottom_toTopOf="@id/recycler_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title"
-        tools:layout_constraintStart_toStartOf="parent" />
+        tools:layout_constraintStart_toStartOf="parent"
+        android:textSize="18sp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
