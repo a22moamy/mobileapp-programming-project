@@ -93,7 +93,7 @@ public class ThirdActivity extends MainActivity {
 
             zodiacDatum.setText(datum);
             zodiacTitle.setText(name);
-            zodiacProcent.setText(procent + " av befolkningen i Valhalla är " + (name.toLowerCase(Locale.ROOT)) + ".");
+            zodiacProcent.setText(procent + " av befolkningen i världen är " + (name.toLowerCase(Locale.ROOT)) + ".");
             StringBuilder stringBuilder = new StringBuilder();
             for (int i = 0; i < auxdata.length; i++) {
                 stringBuilder.append(auxdata[i]);

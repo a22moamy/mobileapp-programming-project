@@ -84,7 +84,6 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
     @Override
     public void onPostExecute(String json) {
 
-        Log.d("MainActivity", json);
         Gson gson = new Gson();
         StarSign[] signs = gson.fromJson(json, StarSign[].class);
 
